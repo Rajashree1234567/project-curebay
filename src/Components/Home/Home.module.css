@@ -1,0 +1,51 @@
+
+.homeContainer {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .searchInput {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .searchInput:focus {
+    border-color: #007bff;
+  }
+  
+  .table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .table tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  .table tr:hover {
+    background-color: #f1f1f1;
+  }
+  

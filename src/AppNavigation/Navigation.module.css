@@ -1,0 +1,45 @@
+
+.navbar {
+    background-color: #007bff; 
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .navLink {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navLink:hover {
+    color: #ffcc00; 
+  }
+  .active {
+    border-bottom: 2px solid #ffcc00; 
+    color: #ffcc00 !important; 
+    font-weight: bold;
+  }
+
+
+.cartIcon {
+  position: relative;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cartCount {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 7px;
+  border-radius: 50%;
+}
