@@ -8,31 +8,31 @@ export const Home = () => {
   const [filteredData, setFilteredData] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate(); 
 
-  // Fetch data from an API
+
+  const fetchData = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/users"
+      ); 
+      const result = await response.json();
+      setData(result);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+    setLoading(false);
+  };
+  
   useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      try {
-        const response = await fetch(
-          "https://jsonplaceholder.typicode.com/users"
-        ); // Example API
-        const result = await response.json();
-        setData(result);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-      setLoading(false);
-    };
-
     fetchData();
   }, []);
 
-  // Update filtered data when search input changes
+
   useEffect(() => {
     if (search.trim() === "") {
-      setFilteredData([]); // Hide data if search is empty
+      setFilteredData([]);
     } else {
       const filtered = data.filter(
         (item) =>
@@ -59,7 +59,6 @@ export const Home = () => {
 
       {loading && <p>Loading data...</p>}
 
-      {/* Show Table Only if Search Input has Value */}
       {filteredData.length > 0 && (
         <table className={styled.table}>
           <thead>

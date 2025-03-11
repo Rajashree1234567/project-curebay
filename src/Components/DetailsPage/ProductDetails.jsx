@@ -8,7 +8,7 @@ export const ProductDetails = () => {
     const { id } = useParams(); 
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(false);
-    const { cart, setCart } = useContext(CartContext);
+    const { setCart } = useContext(CartContext);
     const navigate = useNavigate();
 
     const fetchProducDetails = async () => {
