@@ -2,3 +2,36 @@ body {
     padding: 0;
     margin: 0;
 }
+
+
+/* dark mode */
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+.toggle-btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #0056b3;
+}

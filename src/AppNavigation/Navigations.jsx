@@ -2,10 +2,15 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import styled from './Navigation.module.css';
-import { CartContext } from "../App";
+import { CartContext } from "../RootContext";
+import { ThemeContext } from "../RootContext";
 import logo from "../assets/mediconnectLogo.png.webp";
+import '../App.css';
+
 
 export const NAvigations = () => {
+
+  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
 
   const { cart } = useContext(CartContext);
 
@@ -30,6 +35,11 @@ export const NAvigations = () => {
       <div className={styled.cartIcon}>
           <NavLink to="/cart">🛒</NavLink>
           {cart.length > 0 && <span className={styled.cartCount}>{cart.length}</span>}
+      </div>
+      <div>
+        <button onClick={toggleTheme} style={styled.toggleButton}>
+          {isDarkMode ? ' 🌙 ' : ' 🌞'}    
+        </button>
       </div>
   </nav>
   )

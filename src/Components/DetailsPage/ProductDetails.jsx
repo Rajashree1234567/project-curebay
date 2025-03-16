@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useContext  } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 import styled from './Details.module.css';
-import { CartContext } from "../../App";
+import { CartContext } from "../../RootContext";
 
 export const ProductDetails = () => {
 
